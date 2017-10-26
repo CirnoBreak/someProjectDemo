@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background: #242463;
+}
 a {
   text-decoration: none;
 }
@@ -11,7 +14,7 @@ a:visited {
 nav {
   width: 100%;
   height: 50px;
-  background: #000;
+  background: rgba(0, 0, 0, 0.1);
   display: flex;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -23,23 +26,69 @@ nav {
   width: 50px;
   height: 50px;
   justify-content: flex-start;
+  margin: 0 10px;
 }
 .nav-content,
 .drop-menu {
   list-style: none;
 }
-.nav-content {
-  display: flex;
-  width: auto;
-  margin: 0 auto;
+.drop-hover:hover {
+  cursor: pointer;
 }
-.nav-content li {
-  justify-content: flex-start;
+.drop-hover:hover .drop-menu {
+  max-height: 100%;
+}
+.drop-menu {
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -ms-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff;
+  padding-right: 30px;
+  line-height: 30px;
+}
+.drop-menu li {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.nav-content {
+  width: 350px;
+  padding: 0 20px;
+}
+.nav-content li:hover {
+  cursor: pointer;
+  color: #00b7ff;
+}
+.nav-content > li {
+  float: left;
+  padding: 0 10px;
   line-height: 50px;
   color: #fff;
 }
-.nav-action {
-  justify-content: flex-end;
-  width: 100px;
+.nav-right {
+  position: absolute;
+  right: -50px;
+  width: 200px;
   line-height: 50px;
+}
+.nav-right a {
+  padding: 5px 15px;
+}
+.reg {
+  border: 1px solid #fff;
+  border-radius: 20px;
+}
+.login {
+  border-radius: 20px;
+  background: #000;
+}
+@media screen and (max-width: 768px) {
+  .nav-content {
+    display: none;
+  }
 }
