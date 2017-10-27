@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+}
+.main {
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: row;
+}
+.pic-content{
+    background-color: #ccc;
+    height: 100%;
+    flex: 1;
+    border-right: 1px solid silver;
+    overflow: auto;
+}
+.pic-info{
+    width: 320px;
+    background-color: #ddd;
+    height: 100%;
+    overflow: auto;
+}
