@@ -11,6 +11,7 @@
 
 <body>
     <ul class="grid hoverUp">
+        <p class="tip"><span>认真点的赞不能取消哟</span></p>
         <li>
             <figure>
                 <a href="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-575188.png" target="_new">
@@ -238,7 +239,7 @@
                 </figcaption>
             </figure>
         </li>
-        <p class="tip"><span>认真点的赞不能取消哟</span></p>
+        
     </ul>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src='https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js'></script>
@@ -285,7 +286,9 @@
             var posTop = e.parents('li').offset().top;
             var disTop=($('.tip').outerHeight()-e.parents('li').outerHeight())/2;
             var t = posTop - disTop;
-            console.log(disLeft);
+            // console.log(disLeft);
+            console.log("l:"+l);
+            console.log("t:"+t);
             $('.tip').css({'left':l+'px','top': t+'px'}).stop(true, true).fadeIn(500).fadeOut(1500);
         }
 

@@ -106,6 +106,7 @@ p.tip {
   border-radius: 5px;
   padding: 5px 10px;
   display: none;
+  z-index: 999;
 }
 p.tip span {
   color: #fff;
