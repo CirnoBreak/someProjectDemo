@@ -7,9 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./latest.css">
+    <link rel="stylesheet" href="../nav/nav.css">
 </head>
 
 <body>
+    <div class="test"></div>
     <ul class="grid hoverUp">
         <!-- 提示 -->
         <p class="tip">
@@ -858,7 +860,7 @@
             }, 500);
         }
         function showBack() {
-            if ($(window).scrollTop() > $(window).height()/2) {
+            if ($(window).scrollTop() > $(window).height() / 2) {
                 backButton.fadeIn();
             } else {
                 backButton.fadeOut();
@@ -866,6 +868,7 @@
         }
         $(window).on('scroll', showBack);
         backButton.on('click', backToTop);
+        $(".test").load("../nav/nav.html nav");
     </script>
     <!-- <script>
         $(function() {
