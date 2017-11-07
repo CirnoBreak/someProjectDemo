@@ -7,9 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./latest.css">
+    <link rel="stylesheet" href="../nav/nav.css">
 </head>
 
 <body>
+    <div class="test"></div>
     <ul class="grid hoverUp">
         <!-- 提示 -->
         <p class="tip">
@@ -802,6 +804,9 @@
         </svg>
     </button>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(".test").load("../nav/nav.html nav");
+    </script>
     <script src='https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js'></script>
     <script src='https://afarkas.github.io/lazysizes/lazysizes.min.js'></script>
     <script>
@@ -859,7 +864,7 @@
             }, 500);
         }
         function showBack() {
-            if ($(window).scrollTop() > $(window).height()/2) {
+            if ($(window).scrollTop() > $(window).height() / 2) {
                 backButton.fadeIn();
             } else {
                 backButton.fadeOut();
@@ -867,6 +872,7 @@
         }
         $(window).on('scroll', showBack);
         backButton.on('click', backToTop);
+
     </script>
     <!-- <script>
         $(function() {

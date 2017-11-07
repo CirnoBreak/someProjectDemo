@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
 }
-
 a {
   text-decoration: none;
 }
@@ -37,6 +36,7 @@ nav {
   max-height: 100%;
 }
 .drop-menu {
+  z-index: 999;
   -webkit-transition: max-height 1s;
   -moz-transition: max-height 1s;
   -ms-transition: max-height 1s;
@@ -45,7 +45,7 @@ nav {
   max-height: 0;
   overflow: hidden;
   position: absolute;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.5);
   color: #fff;
   padding-right: 30px;
   line-height: 30px;
@@ -70,8 +70,8 @@ nav {
 }
 .nav-right {
   position: absolute;
-  right: -50px;
-  width: 200px;
+  right: 0;
+  margin-right: 15px;
   line-height: 50px;
 }
 .nav-right a {
