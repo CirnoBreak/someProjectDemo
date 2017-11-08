@@ -5,8 +5,16 @@
 a {
   text-decoration: none;
 }
-a:visited {
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
   color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: #00b7ff;
 }
 nav {
   width: 100%;

@@ -807,7 +807,7 @@
     <script>
         $(".test").load("../nav/nav.html nav");
     </script>
-    <script src='https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js'></script>
+    <!-- <script src='https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js'></script> -->
     <script src='https://afarkas.github.io/lazysizes/lazysizes.min.js'></script>
     <script>
         window.lazySizesConfig = window.lazySizesConfig || {};
@@ -852,8 +852,8 @@
             var disTop = ($('.tip').outerHeight() - e.parents('li').outerHeight()) / 2;
             var t = posTop - disTop;
             // console.log(disLeft);
-            console.log("l:" + l);
-            console.log("t:" + t);
+            // console.log("l:" + l);
+            // console.log("t:" + t);
             $('.tip').css({ 'left': l + 'px', 'top': t + 'px' }).stop(true, true).fadeIn(500).fadeOut(1500);
         }
         var backButton = $('.back-to-top');
