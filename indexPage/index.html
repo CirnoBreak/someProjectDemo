@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../nav/nav.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- 模态遮罩 -->
+        <div class="mask"></div>
+        <!-- 登录模态框 -->
+        <div class="login-modal">
+            <h1>登录</h1>
+            <h2>请输入您的账号密码</h2>
+            <form>
+                <div class="group">
+                    <input type="text" required>
+                    <span class="line"></span>
+                    <label>手机号/邮箱/用户名</label>
+                </div>
+                <div class="group">
+                    <input type="password" required>
+                    <span class="line"></span>
+                    <label>密码</label>
+                </div>
+                <button type="submit" class="button buttonBlue">登录</button>
+        </div>
+        <!-- 注册模态框 -->
+        <div class="reg-modal">
+            <h1>注册</h1>
+            <h2>请输入您的账号密码</h2>
+            <form>
+                <div class="group">
+                    <input type="text" required>
+                    <span class="line"></span>
+                    <label>手机号/邮箱/用户名</label>
+                </div>
+                <div class="group">
+                    <input type="password" required>
+                    <span class="line"></span>
+                    <label>密码</label>
+                </div>
+                <div class="group">
+                        <input type="password" required>
+                        <span class="line"></span>
+                        <label>确认密码</label>
+                    </div>
+                <button type="submit" class="button buttonBlue">注册</button>
+        </div>
+        <!-- 导航栏 -->
+        <div id="navbar"></div>
+        <!-- 横幅 -->
+        <div class="banner" onselectstart="return false;">
+            <div class="inner">
+                <h1>欢迎,影约!</h1>
+                <p>一个你从未发现过的幻境，此处，可以回忆你最美好的生活!</p>
+                <button>开始了解</button>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="content">
+        <div class="section1">
+            <div class="start-line">
+                <a>由此开始</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $('#navbar').load('../nav/nav.html nav', function () {
+            $('.login').on('click', function () {
+                $('.mask').fadeIn();
+                $('.login-modal').fadeIn();
+            });
+            $('.reg').on('click', function () {
+                $('.mask').fadeIn();
+                $('.reg-modal').fadeIn();
+            });
+            $('.mask').on('click', function () {
+                $(this).fadeOut();
+                $('.login-modal').fadeOut();
+                $('.reg-modal').fadeOut();
+            });
+            $('input').blur(function () {
+                var $this = $(this);
+                if ($this.val()) {
+                    $this.addClass('used');
+                }
+                else {
+                    $this.removeClass('used');
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
