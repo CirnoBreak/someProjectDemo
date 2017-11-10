@@ -18,8 +18,8 @@
 .reg-modal {
   display: none;
   max-width: 500px;
-  filter: opacity(0.8);
-  -webkit-filter: opacity(0.8);
+  filter: opacity(0.7);
+  -webkit-filter: opacity(0.7);
   height: 380px;
   background-color: #fff;
   border-radius: 15px;
@@ -164,6 +164,7 @@
   border-bottom: 1px solid #fff;
 }
 .banner .inner p {
+  margin-top: 20px;
   font-size: 1.5em;
 }
 .banner .inner button {
@@ -175,6 +176,10 @@
   border-radius: 5px;
   outline: none;
   cursor: pointer;
+}
+.banner .inner button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transition: all .2s linear;
 }
 .start-line {
   text-align: center;
@@ -201,4 +206,103 @@
 }
 .start-line:after {
   right: 0;
+}
+.content {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.content1 {
+  margin-top: 150px;
+}
+.activity-container {
+  border: 1px solid #00A0E3;
+  max-width: 1440px;
+  height: 500px;
+  margin: 0 auto;
+}
+.tabs-container {
+  width: 100%;
+}
+.tabs-container .tabs-list {
+  padding-top: 100px;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+}
+.tabs-container .tabs-list > li {
+  cursor: pointer;
+  padding: 10px 0;
+  flex: 1;
+  text-align: center;
+  width: 100px;
+  list-style: none;
+}
+.tabs-container .tabs-list > li.active {
+  border-bottom: 2px solid #00A0E3;
+}
+.tabs-container .tabs-list > li:hover {
+  color: #00A0E3;
+}
+.tabs-pic {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: block;
+}
+.tabs-pic-show {
+  display: block;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  list-style: none;
+}
+.tabs-pic-show > li {
+  display: none;
+  position: relative;
+  width: 100%;
+}
+.tabs-pic-show > li.active {
+  display: block;
+}
+ul.grid {
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+ul.grid li {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  margin: 10px;
+}
+ul.grid li .pic {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-position: center center;
+  background-size: cover;
+}
+.pic img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+footer {
+  margin-top: 50px;
+  max-width: 100%;
+  height: 5em;
+  border: 1px solid #000;
 }

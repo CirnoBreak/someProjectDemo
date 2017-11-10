@@ -47,10 +47,10 @@
                     <label>密码</label>
                 </div>
                 <div class="group">
-                        <input type="password" required>
-                        <span class="line"></span>
-                        <label>确认密码</label>
-                    </div>
+                    <input type="password" required>
+                    <span class="line"></span>
+                    <label>确认密码</label>
+                </div>
                 <button type="submit" class="button buttonBlue">注册</button>
         </div>
         <!-- 导航栏 -->
@@ -70,9 +70,170 @@
             <div class="start-line">
                 <a>由此开始</a>
             </div>
+            <div class="tabs-container">
+                <ul class="tabs-list">
+                    <li class="active">人物</li>
+                    <li>动物</li>
+                    <li>风景</li>
+                    <li>汽车</li>
+                </ul>
+            </div>
         </div>
-        
+        <div class="tabs-pic">
+            <ul class="tabs-pic-show">
+                <li class="active">
+                    <ul class="grid">
+                        <li>
+                            <div class="pic">
+                                <img src="./img/r0.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/r1.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/r2.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/r3.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/r4.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/r5.jpg" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="grid">
+                        <li>
+                            <div class="pic">
+                                <img src="./img/d0.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/d1.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/d2.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/d3.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/d4.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/d5.jpg" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="grid">
+                        <li>
+                            <div class="pic">
+                                <img src="./img/f0.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/f1.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/f2.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/f3.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/f4.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/f5.jpg" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="grid">
+                        <li>
+                            <div class="pic">
+                                <img src="./img/q0.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/q1.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/q2.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/q3.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/q4.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="./img/q5.jpg" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
+
+    <div class="content1">
+        <div class="section1">
+            <div class="start-line">
+                <a>精彩活动</a>
+            </div>
+            <div class="activity-container">
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        
+    </footer>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script>
         $('#navbar').load('../nav/nav.html nav', function () {
@@ -99,7 +260,11 @@
                 }
             });
         });
-
+        $('.tabs-list > li').on('click', function () {
+            var tabIndex = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.tabs-pic-show > li').eq(tabIndex).addClass('active').siblings().removeClass('active');
+        });
     </script>
 </body>
 
