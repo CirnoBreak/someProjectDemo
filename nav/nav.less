@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
+body {
+    background: #ccc;
+}
 a {
     text-decoration: none;
     &:link, &:visited, &:hover, &:focus, &:active {
@@ -20,6 +22,7 @@ nav {
     display: flex;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    align-items: center;
 }
 
 .logo {
@@ -28,7 +31,6 @@ nav {
     background-size: 50px 50px;
     width: 50px;
     height: 50px;
-    justify-content: flex-start;
     margin: 0 10px;
 }
 .nav-content, .drop-menu {
@@ -37,9 +39,7 @@ nav {
 .drop-hover:hover {
     cursor: pointer;
     .drop-menu {
-        // display: block;
         max-height: 100%;
-        // opacity: 1;
     }
 }
 .drop-menu {
@@ -49,11 +49,9 @@ nav {
     -ms-transition: max-height 1s;
     -o-transition: max-height 1s;
     transition: max-height 1s;
-    // opacity: 0.5;
     max-height: 0;
     overflow: hidden;
     position: absolute;
-    //background: rgba(0, 0, 0, 0.1);
     background: hsla(0, 0%, 100%, .5);
     color: #fff;
     padding-right: 30px;
@@ -66,7 +64,7 @@ nav {
 .nav-content {
     width: 350px;
     padding: 0 20px;
-    li:hover {
+    &>li:hover {
         cursor: pointer;
         color: rgb(0, 183, 255);
     }
@@ -78,11 +76,10 @@ nav {
     }
 }
 .nav-right {
-    position: absolute;
+    margin-left: auto;
     height: 50px;
     right: 0;
     margin-right: 15px;
-    // width: 200px;
     line-height: 50px;
     list-style: none;
     & > li {
