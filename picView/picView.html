@@ -20,37 +20,48 @@
 </head>
 
 <body>
-    <nav>
-        <a class="logo" href="#"></a>
-        <ul class="nav-content">
-            <li>最新</li>
-            <li>约拍</li>
-            <li>关于我们</li>
-            <li class="drop-hover">发现
-                <ul class="drop-menu" style="z-index: 999;">
-                    <li>最新活动</li>
-                    <li>往期活动</li>
-                    <li>随便看看</li>
-                    <li>下载APP</li>
-                    <li>商务合作</li>
-                </ul>
-            </li>
-        </ul>
-        <div class="nav-right">
-            <a href="" class="reg">注册</a>
-            <a href="" class="login">登陆</a>
-        </div>
-        </div>
-    </nav>
+    <div id="navbar"></div>
     <div class="main">
         <div class="pic-content">
             <div class="pic-content-left"></div>
-            <img src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-578332.jpg" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" class="load-icon" width="38" height="38" viewBox="0 0 38 38" stroke="#fff">
+                <g fill="none" fill-rule="evenodd">
+                    <g transform="translate(1 1)" stroke-width="2">
+                        <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+                        <path d="M36 18c0-9.94-8.06-18-18-18" transform="rotate(39.5088 18 18)">
+                            <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"/>
+                        </path>
+                    </g>
+                </g>
+            </svg>
+            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1510657174283&di=1255f24b185d618ae008262156b80d48&imgtype=0&src=http%3A%2F%2Fp0.ifengimg.com%2Fpmop%2F2017%2F0513%2F87044545B139D57CAE38694BA6C385691BF2EB48_size56_w1920_h1080.jpeg" alt="">
             <div class="pic-content-right"></div>
         </div>
-        <div class="pic-info">
+        <div class="info-panel">
+            <div class="author-info"></div>
+            <div class="like-info"></div>
+            <div class="pic-info">
+                <a href="#">jklsdfljksdf</a>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, dolorum quae! Eveniet praesentium, dolorum modi cupiditate impedit voluptates eos doloremque. Perferendis inventore impedit quia, animi numquam labore quibusdam pariatur obcaecati?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam exercitationem maxime molestiae doloribus eum natus architecto magnam dolores eligendi ab odio ipsam ex, laudantium dolorum distinctio molestias fugiat nesciunt saepe!
+                </p>
+            </div>
+            <input id="detail-drop" type="checkbox" name="tabs">
+            <label for="detail-drop" class="detail-drop">详情</label>
+            <div class="detail-show">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum animi laboriosam qui rerum totam sed voluptatum omnis laudantium aliquid cupiditate, possimus quas, eum beatae eaque molestiae pariatur atque provident! Accusantium.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam reprehenderit eaque dignissimos, corporis voluptatum consequatur nam impedit ratione assumenda rerum error iusto nobis atque soluta aperiam iure veritatis inventore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus modi consequuntur adipisci. Corporis odit quod atque tempore, officia vel non error provident aliquam harum facilis consectetur obcaecati dolores porro numquam.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo quod, iste totam, adipisci placeat minus ea rerum aliquam reiciendis fugit repudiandae assumenda soluta nemo, sequi nihil a labore blanditiis dolorum!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum possimus unde alias! Omnis, ipsam distinctio accusamus consequuntur ut officia nostrum aliquid natus necessitatibus numquam a? Nihil dolore voluptatibus doloribus. Voluptates.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ratione odit tempore magnam minus, ex nesciunt impedit deserunt qui aliquam, sequi harum. Quidem cupiditate maxime fugiat deserunt expedita reprehenderit delectus!
+            </div>
         </div>
     </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $('#navbar').load('../nav/nav.html nav');
+    </script>
 </body>
 
 </html>

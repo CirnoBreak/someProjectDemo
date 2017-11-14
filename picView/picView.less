@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.main {
+    width: 100%;
+    height: calc(~"100% - 50px");
+    display: flex;
+    flex-direction: row;
+}
+.pic-content{
+    position: relative;
+    background-color: #ddd;
+    height: 100%;
+    flex: 1;
+    border-right: 1px solid silver;
+    overflow: hidden;
+}
+.pic-content-left, .pic-content-right {
+    width: 25%;
+    height: 100%;
+    position: absolute;
+}
+.pic-content-left {
+    top: 0;
+    left: 0;
+}
+.pic-content-right {
+    top: 0;
+    right: 0;
+}
+.pic-content img {
+    position: relative;
+    transform: translate(-50%, -50%);
+    max-height: 100%;
+    max-width: 100%;
+    background: #eee;
+    top: 50%;
+    left: 50%;
+}
+.info-panel{
+    width: 320px;
+    background-color: #ccc;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden; 
+    .author-info {
+        height: 120px;
+        background: #000;
+    }
+    .like-info {
+        height: 80px;
+        background: blue;
+    }
+    .pic-info {
+        height: auto;
+        background: red;
+    }
+    #detail-drop {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+    .detail-drop {
+        cursor: pointer;
+        background: orange;
+        display: block;
+        height: 60px;
+    }
+    .detail-show {
+        max-height: 0;
+        overflow: hidden;
+        background: green;
+        -webkit-transition: max-height 1s;
+        -moz-transition: max-height 1s;
+        -ms-transition: max-height 1s;
+        -o-transition: max-height 1s;
+        transition: max-height 1s;
+    }
+}
+input:checked ~ .detail-show {
+    max-height: 100%;
+}
+.load-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+}
