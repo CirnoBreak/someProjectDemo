@@ -54,16 +54,81 @@ html {
   overflow-x: hidden;
 }
 .info-panel .author-info {
-  height: 120px;
-  background: #000;
+  height: 80px;
+  border-bottom: 2px solid silver;
+  position: relative;
+}
+.info-panel .author-info .author-avatar {
+  height: 60px;
+  width: 60px;
+}
+.info-panel .author-info .author-avatar img {
+  margin: 20px 0;
+  width: 50px;
+  height: 50px;
+  line-height: 60px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+.info-panel .author-info .author-name {
+  text-decoration: none;
+  color: #666;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.info-panel .author-info p {
+  position: absolute;
+  bottom: 15px;
+  margin-left: 10px;
+  display: inline-block;
 }
 .info-panel .like-info {
   height: 80px;
-  background: blue;
+  position: relative;
+  border-bottom: 2px solid silver;
+}
+.info-panel .like-info .like-all {
+  cursor: pointer;
+  position: relative;
+  border-radius: 20px;
+  display: inline-block;
+  width: 110px;
+  height: 45px;
+  margin: 20px 0 20px 10px;
+  background: red;
+}
+.info-panel .like-info .like-all > svg {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+.info-panel .like-info .like-all:after {
+  content: '4399';
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.info-panel .like-info .like-all:hover {
+  background: #ff2e2e;
+}
+.info-panel .like-info .like-all:focus {
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  filter: opacity(0.5);
+  -webkit-filter: opacity(0.5);
+}
+.info-panel .like-info > svg {
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
 .info-panel .pic-info {
   height: auto;
-  background: red;
+  position: relative;
+  margin-left: 10px;
+  border-bottom: 2px solid silver;
 }
 .info-panel #detail-drop {
   position: absolute;
@@ -71,23 +136,47 @@ html {
   z-index: -1;
 }
 .info-panel .detail-drop {
+  position: relative;
   cursor: pointer;
-  background: orange;
+  border-bottom: 2px solid silver;
   display: block;
   height: 60px;
+}
+.info-panel .detail-drop .detail-icon {
+  position: relative;
+  top: 20px;
+  left: 10px;
+}
+.info-panel .detail-drop .drop-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+.info-panel .detail-drop span {
+  position: relative;
+  left: 20px;
+  top: 10px;
+  font-size: 1.1em;
 }
 .info-panel .detail-show {
   max-height: 0;
   overflow: hidden;
-  background: green;
   -webkit-transition: max-height 1s;
   -moz-transition: max-height 1s;
   -ms-transition: max-height 1s;
   -o-transition: max-height 1s;
   transition: max-height 1s;
 }
-input:checked ~ .detail-show {
+#detail-drop:checked ~ .detail-show {
   max-height: 100%;
+}
+#detail-drop:checked + label > .drop-icon {
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
 }
 .load-icon {
   position: absolute;
