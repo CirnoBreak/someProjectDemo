@@ -8,16 +8,7 @@
     <title>picView</title>
     <link rel="stylesheet" href="./picView.css">
     <link rel="stylesheet" href="../nav/nav.css">
-    <style>
-        body {
-            background: #ccc;
-        }
 
-        nav {
-            background: transparent;
-            border-bottom: 1px solid silver;
-        }
-    </style>
 </head>
 
 <body>
@@ -107,19 +98,30 @@
                 </svg>
             </label>
             <div class="detail-show">
-                <div class="area" placeholder="请输入你的评论" contenteditable="true"></div>  
-                <div class="reply">回复</div>
+                <div class="commment-wrapper">
+                    <div class="u-avatar" style="background-image: url(../nav/img/psico.jpg)"></div>
+                    <div class="area" placeholder="请输入你的评论" contenteditable="true"></div>
+                </div>
+                <div class="reply">评论</div>
                 <div class="comment-container">
                     <div class="comment-show">
-                        sldfkjsdlfkj
-                        <div class="area" placeholder="请输入你的评论" contenteditable="true"></div>  
-                        <div class="reply">回复</div>
+                        <div class="u-comment">
+                            <div class="u-avatar" style="background-image: url(../nav/img/psico.jpg)"></div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aperiam quos laborum recusandae est culpa officia magni, facere laudantium maxime, impedit ea nobis aspernatur itaque quaerat enim a aliquid rem? lsdkfsdfsdfsdfsdfsdfsdfsdfsdffffffffffffsladfkjsdlormjlsdkj</p>
+                        </div>
+                        <div class="area" placeholder="请输入你的评论" contenteditable="true"></div>
+                        <div class="reply">评论</div>
                     </div>
                     <div class="comment-show">
-                            sldfkjsdlfkj
-                            <div class="area" placeholder="请输入你的评论" contenteditable="true"></div>  
-                            <div class="reply">回复</div>
+                        <div class="u-comment">
+                            <div class="u-avatar" style="background-image: url(../nav/img/psico.jpg)"></div>
+                            <p>lsdkfsdfsdfsdfsdfsdfsdfsdfsdffffffffffffsladfkjsdlormjlsdkj</p>
                         </div>
+                        <a href="#" style="margin-left: 30%;">回复</a>
+                        <a href="#" style="margin-left: 5%;">删除</a>
+                        <div class="area" placeholder="请输入你的评论" contenteditable="true"></div>
+                        <div class="reply">回复</div>
+                    </div>
                 </div>
             </div>
 
@@ -128,8 +130,8 @@
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script>
         $('#navbar').load('../nav/nav.html nav');
-        
-        
+
+
     </script>
 </body>
 
