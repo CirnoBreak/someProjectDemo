@@ -36,6 +36,7 @@
         </div>
         <!-- 图片信息区 -->
         <div class="info-panel">
+            <!-- 作者信息 -->
             <div class="author-info">
                 <a class="author-avatar" href="#">
                     <img src="../nav/img/psico.jpg" alt="">
@@ -46,6 +47,7 @@
                     <span> 名粉丝</span>
                 </p>
             </div>
+            <!-- 点赞与分享 -->
             <div class="like-info">
                 <a href="#" class="like-all">
                     <svg t="1510818852675" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1902" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -57,7 +59,7 @@
                             p-id="1903" fill="#ffffff"></path>
                     </svg>
                 </a>
-                <svg t="1510820026685" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2708" xmlns:xlink="http://www.w3.org/1999/xlink"
+                <svg class="share" t="1510820026685" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2708" xmlns:xlink="http://www.w3.org/1999/xlink"
                     width="30" height="30">
                     <defs>
                         <style type="text/css"></style>
@@ -68,6 +70,7 @@
                         p-id="2710"></path>
                 </svg>
             </div>
+            <!-- 图片信息 -->
             <div class="pic-info">
                 <h2>jklsdfljksdf</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, dolorum quae! Eveniet praesentium, dolorum
@@ -97,30 +100,41 @@
                         p-id="5393"></path>
                 </svg>
             </label>
+            <!-- 详情与评论区 -->
             <div class="detail-show">
+                <!-- 回复区 -->
                 <div class="commment-wrapper">
                     <div class="u-avatar" style="background-image: url(../nav/img/psico.jpg)"></div>
                     <div class="area" placeholder="请输入你的评论" contenteditable="true"></div>
                 </div>
                 <div class="reply">评论</div>
+                <!-- 评论展示区 -->
                 <div class="comment-container">
                     <div class="comment-show">
                         <div class="u-comment">
                             <div class="u-avatar" style="background-image: url(../nav/img/psico.jpg)"></div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aperiam quos laborum recusandae est culpa officia magni, facere laudantium maxime, impedit ea nobis aspernatur itaque quaerat enim a aliquid rem? lsdkfsdfsdfsdfsdfsdfsdfsdfsdffffffffffffsladfkjsdlormjlsdkj</p>
                         </div>
-                        <div class="area" placeholder="请输入你的评论" contenteditable="true"></div>
-                        <div class="reply">评论</div>
+                        <a href="JavaScript:void(0);" class="reply-btn" style="margin-left: 30%;">回复</a>
+                        <a href="JavaScript:void(0);" class="del-btn" style="margin-left: 5%;">删除</a>
+                        <a href="JavaScript:void(0);" class="up-btn" style="display:none;margin-left: 5%;">收起</a>
+                        <div class="reply-panel">
+                            <div class="area" placeholder="请输入你的评论" contenteditable="true"></div>
+                            <div class="reply">回复</div>
+                        </div>
                     </div>
                     <div class="comment-show">
                         <div class="u-comment">
                             <div class="u-avatar" style="background-image: url(../nav/img/psico.jpg)"></div>
                             <p>lsdkfsdfsdfsdfsdfsdfsdfsdfsdffffffffffffsladfkjsdlormjlsdkj</p>
                         </div>
-                        <a href="#" style="margin-left: 30%;">回复</a>
-                        <a href="#" style="margin-left: 5%;">删除</a>
-                        <div class="area" placeholder="请输入你的评论" contenteditable="true"></div>
-                        <div class="reply">回复</div>
+                        <a href="JavaScript:void(0);" class="reply-btn" style="margin-left: 30%;">回复</a>
+                        <a href="JavaScript:void(0);" class="del-btn" style="margin-left: 5%;">删除</a>
+                        <a href="JavaScript:void(0);" class="up-btn" style="display:none;margin-left: 5%;">收起</a>
+                        <div class="reply-panel">
+                            <div class="area" placeholder="请输入你的评论" contenteditable="true"></div>
+                            <div class="reply">回复</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,8 +144,22 @@
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script>
         $('#navbar').load('../nav/nav.html nav');
-
-
+        $('.reply-btn').on('click', function () {
+            $(this).siblings('.reply-panel').fadeIn();
+            $(this).siblings('.up-btn').fadeIn();
+        });
+        $('.up-btn').on('click', function () {
+            $(this).siblings('.reply-panel').fadeOut();
+            $(this).fadeOut();
+        });
+        $('.like-all').on('click', function () {
+            var bgColor = $(this).css('background-color');
+            if (bgColor == 'rgb(255, 46, 46)') {
+                $(this).css('background-color', 'black');
+            } else {
+                $(this).css('background-color', 'rgb(255, 46, 46');
+            }
+        });
     </script>
 </body>
 
